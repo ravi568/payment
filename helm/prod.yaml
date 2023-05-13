@@ -1,2 +1,15 @@
 component: payment
 params: "CART_HOST:cart,CART_PORT:8080,USER_HOST:user,USER_PORT:8080,AMQP_HOST:prod.payment.amqp_host,AMQP_USER:prod.payment.amqp_user,AMQP_PASS:prod.payment.amqp_pass"
+
+
+
+
+
+
+#  Environment=CART_HOST={{ lookup('amazon.aws.aws_ssm', '{{env}}.{{component}}.cart_host', region='us-east-1')}}
+#  Environment=CART_PORT={{ lookup('amazon.aws.aws_ssm', '{{env}}.{{component}}.cart_port', region='us-east-1')}}
+#  Environment=USER_HOST={{ lookup('amazon.aws.aws_ssm', '{{env}}.{{component}}.user_host', region='us-east-1')}}
+#  Environment=USER_PORT={{ lookup('amazon.aws.aws_ssm', '{{env}}.{{component}}.user_port', region='us-east-1')}}
+#  Environment=AMQP_HOST={{ lookup('amazon.aws.aws_ssm', '{{env}}.{{component}}.amqp_host', region='us-east-1')}}
+#  Environment=AMQP_USER={{ lookup('amazon.aws.aws_ssm', '{{env}}.{{component}}.amqp_user', region='us-east-1')}}
+#  Environment=AMQP_PASS={{ lookup('amazon.aws.aws_ssm', '{{env}}.{{component}}.amqp_pass', region='us-east-1')}}
